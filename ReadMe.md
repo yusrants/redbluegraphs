@@ -19,9 +19,18 @@ Is a connected and red blue colorable graph
 ## Solution
 
 ### Step 1: Extract paths and edges
-Take user input in the form of a single string and extract paths from it.
-In order to extract paths, first of all replace all "," and "\n" with a single comma. 
-Also, remove any extra space between the characters. For examople: "node no. 1" will be transformed into "nodeno.1" and treated as a single node.
+* Take user input in the form of a single string and extract paths from it.
+* In order to extract paths, first of all replace all "," and "\n" with a single comma. 
+* Also, remove any extra space between the characters. 
+* For examople: 
+````
+"node no. 1" 
+````
+will be transformed into 
+````
+"nodeno.1" 
+````
+and treated as a single node.
 ````
 node1--node2
 node2-node3
