@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="redblue.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title> Red-Blue Colorable Graphs </title>
+
+</head>
+<div class="grid-container">
+        <h1><span class="red"> Red</span><span class="blue">Blue</span> Colorable Graphs</h1>
+
+        <p>
+            A graph is red blue colorable if two connected nodes have <br>
+            never the same color and the graph is a connected graph. 
+
+            <h2> How to draw a graph:</h2>
+            <ul>
+                <li>
+                Use dash <b class="bold">--</b> for an edge
+                </li>
+                <li>
+                    Use a <b class="bold"> word </b> for a node
+                </li>
+                <li>
+                Use a <b class="bold"> new line </b> or a single <b class="bold"> comma</b> for separation between paths
+                </li>
+                <li> Spaces will be ignored</li>
+            </ul>
+    </p>
+  
+        <textarea placeholder="Enter graph here..." rows="4" cols="50" name="graphInput" id="graphInput" form="graphForm" required></textarea>
+
+        <form id="graphForm" onsubmit="findGraph()">
+            <button type="submit" class="button"> Enter </button>
+        </form>
+
+    <p id="result" class="result"> </p>    
+
+  </div>
+</body>
+</html>
