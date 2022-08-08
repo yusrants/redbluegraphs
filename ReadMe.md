@@ -2,13 +2,13 @@
 
 A graph is red blue colorable if two connected nodes have
 never the same color and the graph is a connected graph. 
- ### Input: a-b-c
+**Input: a-b-c**
 Is a connected and red blue colorable graph
-### Input: a-b, f-g
-Is not a connected grap h
-### Input: a-b-c-a
+**Input: a-b, f-g**
+Is not a connected graph
+**Input: a-b-c-a**
 Is a connected graph, but not red blue colorable
-### Input: a-b, c-d, b-c, a-d
+**Input: a-b, c-d, b-c, a-d**
 Is a connected and red blue colorable graph
 
 ## Solution
@@ -88,6 +88,8 @@ colored: [false,false,false,false]
 * Next we call the isConnected() function that checks if there are ANY unvisited elements in the ***colored*** array. If that's the case we mark *is_connected* as false.
 
 ### Step 5: Result
-* Check both the values *is_connected* and *is_redblue* to make the conclusions.
-
+* Check both the values *is_connected* and *is_redblue* to make the following conclusions:
+    - "The graph is connected and red-blue colorable!"
+    - "The graph is not connected!"
+    - "The graph is connected but not red-blue colorable!"
 
