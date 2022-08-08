@@ -11,7 +11,7 @@ Is a connected graph, but not red blue colorable
 - **Input: a-b, c-d, b-c, a-d**
 Is a connected and red blue colorable graph
 
-- Note: A graph with just one vertex is connected. An edgeless graph with two or more vertices is disconnected.
+**Note:** A graph with just one vertex is connected. An edgeless graph with two or more vertices is disconnected.
 ## Solution
 
 ### Step 1: Extracting paths
