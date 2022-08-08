@@ -19,7 +19,7 @@ Is a connected and red blue colorable graph
 * In order to extract paths, first of all replace all "\n" with a single comma.
 * Replace consecutives dashes (---) for edges with a single "-", for consecutive processing for edges. 
 * Next, remove any extra space between the characters. 
-##### For examople: 
+##### For example: 
 ````
 " node no. 1 " 
 ````
