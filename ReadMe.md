@@ -2,15 +2,16 @@
 
 A graph is red blue colorable if two connected nodes have
 never the same color and the graph is a connected graph. 
-**Input: a-b-c**
+- **Input: a-b-c**
 Is a connected and red blue colorable graph
-**Input: a-b, f-g**
+- **Input: a-b, f-g**
 Is not a connected graph
-**Input: a-b-c-a**
+- **Input: a-b-c-a**
 Is a connected graph, but not red blue colorable
-**Input: a-b, c-d, b-c, a-d**
+- **Input: a-b, c-d, b-c, a-d**
 Is a connected and red blue colorable graph
 
+- Note: A graph with just one vertex is connected. An edgeless graph with two or more vertices is disconnected.
 ## Solution
 
 ### Step 1: Extracting paths
