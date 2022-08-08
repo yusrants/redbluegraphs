@@ -12,7 +12,7 @@ class Graph {
 
     addNode (a,b) {
         
-        // if a is already present in the graph, push b to it's list
+        // if "a" is already present in the graph, push "b" to its list
         if (this.graph[a]) {
             if (this.graph[a].indexOf(b) === -1)
                     this.graph[a].push(b);
@@ -29,7 +29,7 @@ class Graph {
     
     addEdge(a,b) {
         
-        // As a and b are the respective nodes of the edge, add a to b's list and vice versa
+        // As a and b are the respective nodes of the edge, add "a" to "b" list and "b" to "a" list
         this.addNode(a,b);
         this.addNode(b,a);
     }
@@ -69,12 +69,14 @@ class Graph {
 
     setNodes() {
         this.nodes = Object.keys(this.graph);
-        this.nodes.forEach((node, index) => {
-            this.colored[index] = false;
-        })
+        this.colored = new Array(this.nodes.length).fill(false);
     }
 
-    dfs() {
+    dfs(graph) {
+
+        this.getPaths(graph);
+        this.setNodes();
+
         const visited = [];
         const start = 0;
 
@@ -89,7 +91,7 @@ class Graph {
         
         while (visited.length)
         {   
-            // Get the latest node from the stack
+            // Get the latest node from the visited stack
             node = visited.pop();
 
             // Find out its index
@@ -103,7 +105,7 @@ class Graph {
                 {
                     const index = this.nodes.indexOf(node);
 
-                    // Coloring the adjacent nodes with opposite color
+                    // Coloring the current adjacent node with opposite color
                     if (!this.colored[index]) {
                         this.colored[index] = 3 - this.colored[current];
                         visited.push(this.nodes[index]);
@@ -120,20 +122,22 @@ class Graph {
                     }
                 })
         }
-        
+
+        this.isConnected();
     }
 
-    isRedBlue (graph) {
-
-        this.getPaths(graph);
-        this.setNodes();
-        this.dfs();
+    isConnected() {
 
         this.colored.forEach(node=>{
             if(!node){
                 this.is_connected = false;
             }
         })
+    }
+
+    isRedBlue (graph) {
+
+        this.dfs(graph);
 
         // Results
         if (this.is_connected && this.is_redblue) {
@@ -154,8 +158,6 @@ const findGraph = () => {
     const input = document.getElementById("graphInput").value;
     const output = document.getElementById("result");
     const graph = new Graph();
-    
     graph.isRedBlue(input);
     output.innerHTML = graph.result;
-
 }

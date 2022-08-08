@@ -43,10 +43,12 @@ margin-left: 25%;
 
 .blue {
     color: rgb(46, 46, 169);
-}
+} 
+
 .bold {
     color: chocolate;
 }
+
 .result {
     font-size: x-large;
     font-weight: 700;
